@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing VS Code</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p><strong>Zoomlight</strong><br>Use the sliders to adjust color.</p>
+        <div class="slidecontainer">
+            <p>Red:</p>
+            <input type="range" min="0" max="255" value="100" class="slider" id="rSlider">
+            <p>Green:</p>
+            <input type="range" min="0" max="255" value="100" class="slider" id="gSlider">
+            <p>Blue:</p>
+            <input type="range" min="0" max="255" value="100" class="slider" id="bSlider">
+        </div>
+        <script>
+            let root = document.documentElement;
+
+            root.addEventListener("click", () => {
+                root.style.setProperty('--bg-color-main', `rgb(${rSlider.value}, ${gSlider.value}, ${bSlider.value})`);
+                root.style.setProperty('--fg-color-main', `rgb(${255 - rSlider.value}, ${255 - gSlider.value}, ${255 - bSlider.value})`);
+            });
+        </script>
+    </body>
+</html>
