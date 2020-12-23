@@ -17,15 +17,15 @@
         <script>
             let root = document.documentElement;
 
-            rSlider.addEventListener("onchange", () => {
+            rSlider.addEventListener("change", () => {
                 root.style.setProperty('--bg-color-main', `rgb(${rSlider.value}, ${gSlider.value}, ${bSlider.value})`);
                 root.style.setProperty('--fg-color-main', `rgb(${255 - rSlider.value}, ${255 - gSlider.value}, ${255 - bSlider.value})`);
             });
-            gSlider.addEventListener("onchange", () => {
+            gSlider.addEventListener("change", () => {
                 root.style.setProperty('--bg-color-main', `rgb(${rSlider.value}, ${gSlider.value}, ${bSlider.value})`);
                 root.style.setProperty('--fg-color-main', `rgb(${255 - rSlider.value}, ${255 - gSlider.value}, ${255 - bSlider.value})`);
             });
-            bSlider.addEventListener("onchange", () => {
+            bSlider.addEventListener("change", () => {
                 root.style.setProperty('--bg-color-main', `rgb(${rSlider.value}, ${gSlider.value}, ${bSlider.value})`);
                 root.style.setProperty('--fg-color-main', `rgb(${255 - rSlider.value}, ${255 - gSlider.value}, ${255 - bSlider.value})`);
             });
